@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                Welcome to  RanolfBlog
                 </div>
 
                 <div class="links">
@@ -90,7 +90,7 @@
                     <a href="https://laravel-news.com">News</a>
                     <a href="https://nova.laravel.com">Nova</a>
                     <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="https://github.com/RanylFoumbi/Ranolf-Blog">GitHub</a>
                 </div>
             </div>
         </div>
