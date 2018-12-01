@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
+                <div class="card-header text-center">{{ __('Register') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
@@ -17,11 +17,11 @@
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="name" value="{{ old('name') }}" required autofocus>
 
-                                @if ($errors->has('name'))
+                                 @if ($errors->has('name'))
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $errors->first('name') }}</strong>
                                     </span>
-                                @endif
+                                @endif 
                             </div>
                         </div>
 
@@ -53,21 +53,25 @@
                             </div>
                         </div>
 
-                         
+                         <div class="form-group row">
+                                     <label class="col-md-4 col-form-label text-md-right">{{ __('Gender') }}</label>
+                                     <div class="col-md-6">
+                                        <select name="gender" id="gender" class="form-control" required>
+                                                <option value="">Choose....</option>
+                                                <option value="Male" >Male</option>
+                                                <option value="Female">Female</option>                                                         
+                                            </select> 
+                                    </div>
+                         </div>
 
-                        <div class="form-group row">
-                            <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
+                           <div class="form-group row" style="display:none">
+                                     <label for="confirm" class="col-md-4 col-form-label text-md-right">{{ __('isAdmin') }}</label>
+                                     <div class="col-md-8">
+                                           <input type="text" class="form-control" name="isAdmin" value= 0 placeholder="">
 
-                            <div class="col-md-6">
-                                <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
-                            </div>
-                        </div>
-                       
-                        <div class="form-group ">
-                            <label for="gender-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Gender') }}</label>
-                            <input type="radio" class=" text-md-left " name="gender" value="Male" checked>Male
-                             <input type="radio" class=" text-md-right" name="gender" value="Female" checked>Female
-                        </div>
+                                        </div> 
+                                 </div>
+
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
