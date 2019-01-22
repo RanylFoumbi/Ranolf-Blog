@@ -87,11 +87,15 @@
                     <div class="user-area dropdown float-right">
                         
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        {{ Auth::user()->name }} <img class="user-avatar rounded-circle" src="{{ asset('backend/images/admin.jpg')}}" alt="User Avatar">
+                        
+                            <img class="user-avatar rounded-circle"  src="/storage/avatars/{{ auth::user()->avatar }}" />
+                        <!-- badge -->
+                    
+                            <span class="label label-default rank-label">{{auth::user()->name}}</span>
                         </a>
 
                         <div class="user-menu dropdown-menu">
-                            <a class="nav-link" href="#"><i class="fa fa-user"></i> My Profile</a>
+                            <a class="nav-link" href="{{route('profile')}}"><i class="fa fa-user"></i> My Profile</a>
 
                             <a class="nav-link" href="#"><i class="fa fa-user"></i> Notifications <span class="count">13</span></a>
 

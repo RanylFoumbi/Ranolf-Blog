@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class visitorController extends Controller
 {
-    /**
+    /**   
      * Create a new controller instance.
      *
      * @return void
@@ -16,6 +16,7 @@ class visitorController extends Controller
     {
        $this->middleware('admin');
     }
+    
     public function create(){
 
         return view('admin.visitorform');

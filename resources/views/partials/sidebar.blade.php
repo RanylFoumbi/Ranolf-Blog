@@ -6,8 +6,8 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-menu" aria-controls="main-menu" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="./"><img src="{{ asset('backend/images/logo.png')}}" alt="Logo"></a>
-                <a class="navbar-brand hidden" href="./"><img src="{{ asset('backend/images/logo2.png')}}" alt="Logo"></a>
+                <a class="navbar-brand" href=""><img src="{{ asset('backend/images/logo.png')}}" alt="Logo"></a>
+                <a class="navbar-brand hidden" href=""><img src="{{ asset('backend/images/logo2.png')}}" alt="Logo"></a>
             </div>
 
             <div id="main-menu" class="main-menu collapse navbar-collapse">
@@ -24,11 +24,17 @@
                         </ul>
                     </li>
                     <li class="menu-item-has-children dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Cathegories</a>
+                        <ul class="sub-menu children dropdown-menu">
+                            <li><i class="fa fa-table"></i><a href="{{route('createCathegory')}}">New cathegory</a></li>
+                            <li><i class="fa fa-table"></i><a href="{{route('Admin-cathegoryList')}}">Cathegory list</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-item-has-children dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-table"></i>Posts</a>
                         <ul class="sub-menu children dropdown-menu">
-                            <li><i class="fa fa-table"></i><a href="tables-basic.html">New post</a></li>
-                            <li><i class="fa fa-table"></i><a href="tables-basic.html">All Tags</a></li>
-                            <li><i class="fa fa-table"></i><a href="tables-data.html">Post list</a></li>
+                            <li><i class="fa fa-table"></i><a href="{{route('createPost')}}">New post</a></li>
+                            <li><i class="fa fa-table"></i><a href="{{ route('posts.index') }}">Post list</a></li>
                         </ul>
                     </li>
 
@@ -39,7 +45,7 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="menu-icon fa fa-tasks"></i>Icons</a>
                         <ul class="sub-menu children dropdown-menu">
                             <li><i class="menu-icon ti-email"></i><a href="{{route('visitor')}}">visitors</a></li>
-                            <li><i class="menu-icon ti-email"></i><a href="font-fontawesome.html">Messages</a></li>
+                            <li><i class="menu-icon ti-email"></i><a href="{{route('contact')}}">contact messages</a></li>
                             <li><i class="menu-icon ti-themify-logo"></i><a href="font-themify.html">Author</a></li>
                         </ul>
                     </li>

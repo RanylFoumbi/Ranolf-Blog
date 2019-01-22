@@ -30,7 +30,11 @@
     <script src="{{ asset('backend/vendors/popper.js/dist/umd/popper.min.js')}}"></script>
     <script src="{{ asset('backend/vendors/bootstrap/dist/js/bootstrap.min.js')}}"></script>
     <script src="{{ asset('backend/assets/js/main.js')}}"></script>
-
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=oghq45u214af6907t91543l45gq5xwuj90mmaluspnb8bd7b"></script>
+  <script>tinymce.init({ selector:"textarea",
+  					 	 plugins: "textcolor",
+  						 toolbar: "formatselect | bold italic strikethrough forecolor backcolor | link | alignleft aligncenter alignright alignjustify  | numlist bullist outdent indent  | removeformat",
+  					 });</script>
 
     <script src="{{ asset('backend/vendors/chart.js/dist/Chart.bundle.min.js')}}"></script>
     <script src="{{ asset('backend/assets/js/dashboard.js')}}"></script>
